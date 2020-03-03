@@ -25,14 +25,19 @@ public class Main {
 
         int playerchoice = Integer.parseInt(answer);
 
-        //Random rand = new Random();
-        //int randomgeneratednumber = rand.nextInt(2);
-        //System.out.println(randomgeneratednumber + "*******");
+
+
+        int max = 2; int min = 1;
+        int range = max - min + 1;
+
+        int rand = (int)(Math.random()*range)+min;
+
+
 
         if(playerchoice != 1 && playerchoice != 2){
             System.out.println("not one of the two numbers");
         }  else{
-            if(playerchoice == 1){
+            if(playerchoice == rand){
                 System.out.println("Gobbles you down in one bite!");
             } else{
                 System.out.println("Gives you treasure");
